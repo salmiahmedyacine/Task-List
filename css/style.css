@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(200deg, #16423C 0%, #6A9C89 50%, #A8D1C4 100%);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 30px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#newtask {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 500px;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+#newtask:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+#newtask input {
+    width: 70%;
+    height: 45px;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: 2px solid #d1d3d4;
+    color: #111111;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#newtask input:focus {
+    outline: none;
+    border-color: #6A9C89;
+}
+
+#newtask button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 25%;
+    height: 45px;
+    background: #16423C;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#newtask button:hover {
+    background: #25685f;
+}
+
+#newtask button:focus {
+    outline: none;
+    background: #25685f;
+    box-shadow: 0 0 5px #6A9C89;
+}
+
+
+/* !tasks :*/
+
+#tasks{
+    width: 40%;
+    min-width: 500px;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    margin-top: 60px;
+    display: none;
+    transition: 10s;
+}
+
+#task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    border:none;
+    border-bottom: 2px solid #d1d3d4;
+    height: 50px;
+}
+#task:first-child{
+    margin-top: 0px;
+}
+#task button{
+    border: none;
+    cursor: pointer;
+    color:#16423C;
+    padding: 7px;
+    background: transparent;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+#task button:hover{
+    color: rgb(255, 50, 50);
+    
+}
+#task span{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: rgb(255, 50, 50);
+}
+
+
+/*! For Mobile */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #newtask{
+        width: 90%;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #newtask input {
+        width: 100%;
+    }
+    #newtask button {
+        width: 100%;
+    }
+    #tasks{
+        min-width: 300px;
+    }
+}
